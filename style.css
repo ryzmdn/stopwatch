@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 1280px;
+  padding-inline: 1rem;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  color: #030712;
+}
+.timer > * + * {
+  margin-left: 4px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  margin-block: 16px;
+}
+.controls button {
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  border-radius: 50%;
+  border: none;
+  color: #2563eb;
+  background: #f9fafb;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.laps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  width: 100%;
+  min-height: 300px;
+  margin-block: 24px;
+}
+
+.lap-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: clamp(18.75rem, 14.0625rem + 25vw, 24.0625rem);
+  height: 36px;
+  font-size: clamp(1rem, 0.8897rem + 0.5882vw, 1.125rem);
+  color: #4b5563;
+  line-height: 1.75rem;
+}
+.lap-list div:last-child {
+  place-self: end;
+}
